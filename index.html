@@ -6,15 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>DISEÑA Y CREA | RESINA CON YULI</title>
   <meta name="description" content="MUNDO DE RESINA PARA EMPRENDER">
+  <meta name="keywords" content="resina, accesorios resina, emprender resina">
   <meta property="og:type" content="website">
   <meta property="og:title" content="DISEÑA Y CREA | RESINA CON YULI">
   <meta property="og:description" content="MUNDO DE RESINA PARA EMPRENDER">
   <meta property="og:image" content="https://xn--diseaycrea-w9a.com//franquias/2/7357731/editor-html/12114834.png">
 
+  <!-- ============================================================ -->
+  <!-- META PIXEL — Reemplaza YOUR_PIXEL_ID con tu ID real de Meta  -->
+  <!-- ============================================================ -->
   <!--
-  ================================================================
-  META PIXEL - Descomenta y reemplaza YOUR_PIXEL_ID con tu ID real
-  ================================================================
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -32,278 +33,679 @@
     src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
   </noscript>
   -->
+  <!-- FIN META PIXEL ============================================== -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: "Montserrat", Arial, sans-serif; background: #fff; color: #222; overflow-x: hidden; }
+    body { font-family: 'Montserrat', Arial, sans-serif; background: #fff; color: #222; overflow-x: hidden; }
     .container { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+    .text-center { text-align: center; }
 
-    /* HERO */
-    .hero { background: linear-gradient(90deg, rgba(140,15,241,1) 0%, rgba(140,15,241,1) 100%); padding: 36px 16px 50px; text-align: center; }
-    .hero h2 { font-size: 28px; font-weight: 900; color: #fff; line-height: 1.2; max-width: 960px; margin: 0 auto 28px; text-transform: uppercase; }
-    @media(max-width:600px){ .hero h2 { font-size: 20px; } }
-    .video-box { background: #fff; border: 4px solid #FDD539; border-radius: 20px; max-width: 980px; margin: 0 auto; padding: 18px 18px 22px; box-shadow: 0 8px 30px rgba(0,0,0,.18); }
-    .video-label { font-size: 16px; font-weight: 700; color: #222; text-align: center; margin-bottom: 12px; }
-    .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 14px; overflow: hidden; }
-    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 14px; }
+    /* ------------------------------------------
+       SECCIÓN 1 — HERO
+    ------------------------------------------ */
+    .hero {
+      background: linear-gradient(90deg, rgba(140, 15, 241, 1) 0%, rgba(140, 15, 241, 1) 100%);
+      padding: 40px 16px 50px;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 26px;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.25;
+      max-width: 1000px;
+      margin: 0 auto 28px;
+      text-transform: uppercase;
+    }
+    @media (max-width: 600px) { .hero h2 { font-size: 19px; } }
 
-    /* SEPARATOR */
-    .separator-section { width: 100%; min-height: 200px; background-image: url("https://storage.builderall.com//franquias/2/7357731/editor-html/12114864.png"); background-position: center bottom; background-repeat: repeat-x; background-size: contain; background-color: #fff; }
+    .video-box {
+      background: #ffffff;
+      border: 4px solid #FDD539;
+      border-radius: 20px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 16px 16px 20px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+    }
+    .video-label {
+      font-size: 16px;
+      font-weight: 800;
+      color: #000000;
+      margin-bottom: 12px;
+    }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      border: none;
+      border-radius: 14px;
+    }
 
-    /* BENEFITS */
-    .benefits { background: rgba(255,238,238,1); padding: 40px 16px 50px; text-align: center; }
-    .benefits h2 { font-size: 26px; font-weight: 900; color: #8c0ff1; max-width: 960px; margin: 0 auto 30px; line-height: 1.3; }
-    @media(max-width:600px){ .benefits h2 { font-size: 20px; } }
-    .benefits-box { background: #fff; border: 4px solid #FDC800; border-radius: 20px; max-width: 980px; margin: 0 auto; padding: 30px 20px 36px; }
-    .benefits-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; align-items: start; }
-    @media(max-width:700px){ .benefits-grid { grid-template-columns: 1fr; } }
+    /* SEPARADOR ONDULADO */
+    .separator-section {
+      width: 100%;
+      min-height: 160px;
+      background-image: url('https://storage.builderall.com//franquias/2/7357731/editor-html/12114864.png');
+      background-position: center bottom;
+      background-repeat: repeat-x;
+      background-size: contain;
+      background-color: #ffffff;
+    }
+
+    /* ------------------------------------------
+       SECCIÓN 2 — BENEFICIOS PRINCIPALES
+    ------------------------------------------ */
+    .benefits {
+      background: rgba(255, 238, 238, 1);
+      padding: 40px 16px 50px;
+      text-align: center;
+    }
+    .benefits h2 {
+      font-size: 25px;
+      font-weight: 900;
+      color: #8c0ff1;
+      max-width: 980px;
+      margin: 0 auto 30px;
+      line-height: 1.3;
+    }
+    @media (max-width: 600px) { .benefits h2 { font-size: 19px; } }
+
+    .benefits-box {
+      background: #ffffff;
+      border: 4px solid #FDC800;
+      border-radius: 20px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 30px 20px 36px;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      align-items: start;
+    }
+    @media (max-width: 700px) { .benefits-grid { grid-template-columns: 1fr; } }
+
     .benefit-card { text-align: center; padding: 10px; }
-    .benefit-card img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 14px; border: 3px solid #eee; }
-    .benefit-card p { font-size: 15px; font-style: italic; color: #333; line-height: 1.4; }
+    .benefit-card img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 14px;
+    }
+    .benefit-card p {
+      font-size: 15px;
+      font-style: italic;
+      color: #000000;
+      line-height: 1.4;
+      font-weight: 500;
+    }
 
-    /* CURRICULUM */
-    .curriculum { background: #fff; padding: 40px 16px 50px; text-align: center; }
-    .curriculum h2 { font-size: 28px; font-weight: 900; color: #222; margin-bottom: 10px; text-transform: uppercase; }
-    .curriculum h4 { font-size: 20px; color: #f1c40f; font-weight: 700; margin-bottom: 24px; }
-    @media(max-width:600px){ .curriculum h2 { font-size: 22px; } .curriculum h4 { font-size: 16px; } }
-    .accordion-wrapper { max-width: 780px; margin: 0 auto; text-align: left; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,.08); }
-    .accordion-item { border-bottom: 1px solid #ddd; }
-    .accordion-header { width: 100%; background: #fff; border: none; padding: 18px 20px; text-align: left; font-family: "Montserrat",sans-serif; font-size: 15px; font-weight: 700; color: #222; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background .2s; }
-    .accordion-header:hover { background: #f9f9f9; }
-    .acc-icon { font-size: 22px; color: #8c0ff1; font-weight: 900; transition: transform .3s; flex-shrink: 0; margin-left: 12px; }
+    /* ------------------------------------------
+       SECCIÓN 3 — LO QUE APRENDERÁS (TEMARIO EXHAUSTIVO)
+    ------------------------------------------ */
+    .curriculum {
+      background: #ffffff;
+      padding: 40px 16px 50px;
+      text-align: center;
+    }
+    .curriculum h2 {
+      font-size: 28px;
+      font-weight: 900;
+      color: #8c0ff1;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    .curriculum h4 {
+      font-size: 19px;
+      color: #f1c40f;
+      font-weight: 700;
+      margin-bottom: 28px;
+    }
+    @media (max-width: 600px) {
+      .curriculum h2 { font-size: 22px; }
+      .curriculum h4 { font-size: 15px; }
+    }
+
+    .accordion-wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .accordion-item {
+      margin-bottom: 12px;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .accordion-header {
+      width: 100%;
+      background: #8C0FF1;
+      border: none;
+      padding: 16px 20px;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+    }
+    .accordion-header:hover { background: #7a0ad6; }
+    .acc-icon {
+      font-size: 20px;
+      color: #ffffff;
+      font-weight: 900;
+      transition: transform 0.3s;
+      margin-left: 10px;
+    }
     .accordion-header.open .acc-icon { transform: rotate(45deg); }
-    .accordion-body { display: none; padding: 10px 24px 20px; background: #fafafa; }
+    .accordion-body {
+      display: none;
+      padding: 18px 24px;
+      background: #ffffff;
+      border: 1px solid #8C0FF1;
+      border-top: none;
+      border-radius: 0 0 6px 6px;
+    }
     .accordion-body.open { display: block; }
-    .accordion-body ul { list-style: none; padding: 0; }
-    .accordion-body ul li { font-size: 14px; color: #444; padding: 6px 0; border-bottom: 1px dashed #eee; line-height: 1.4; }
-    .accordion-body ul li::before { content: "? "; color: #8c0ff1; font-size: 11px; }
+    .accordion-body p, .accordion-body div {
+      font-size: 14px;
+      color: #333333;
+      line-height: 1.7;
+      text-align: center;
+    }
 
-    /* TESTIMONIALS */
-    .testimonials { background: linear-gradient(90deg, rgba(140,15,241,1) 0%, rgba(140,15,241,1) 100%); padding: 40px 16px 50px; }
-    .testimonials h2 { font-size: 24px; font-weight: 900; color: #fff; text-align: center; margin-bottom: 28px; text-transform: uppercase; }
-    .testimonials-box { background: rgba(44,62,80,.85); border-radius: 20px; max-width: 980px; margin: 0 auto; padding: 30px 20px 36px; box-shadow: 14px 9px 16px 9px rgba(80,128,151,.48); }
-    .testimonials-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
-    @media(max-width:700px){ .testimonials-grid { grid-template-columns: 1fr; } }
-    .testimonial-card { text-align: center; }
-    .testimonial-card img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 12px; border: 3px solid #8c0ff1; }
-    .testimonial-card blockquote { font-size: 15px; font-style: italic; color: #fff; line-height: 1.4; margin-bottom: 10px; }
-    .testimonial-card cite { font-size: 13px; color: #ccc; font-style: normal; }
+    /* BANNER PROVEEDORES */
+    .suppliers-banner {
+      background: #F1C40F;
+      max-width: 850px;
+      margin: 36px auto 0;
+      padding: 24px 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .suppliers-banner h2 {
+      font-size: 22px;
+      font-weight: 900;
+      color: #000000;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+    @media (max-width: 600px) { .suppliers-banner h2 { font-size: 17px; } }
 
-    /* CTA */
-    .cta-section { background: linear-gradient(90deg, rgba(140,15,241,1) 0%, rgba(140,15,241,1) 100%); padding: 40px 16px 60px; text-align: center; }
-    .payment-icons { display: block; max-width: 320px; margin: 0 auto 30px; }
-    @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(249,174,138,.8)} 70%{box-shadow:0 0 0 16px rgba(249,174,138,0)} 100%{box-shadow:0 0 0 0 rgba(249,174,138,0)} }
-    .cta-btn { display: inline-block; width: 100%; max-width: 880px; background: #F9AE8A; color: #fff; font-family: "Montserrat",Arial,sans-serif; font-size: 18px; font-weight: 900; text-align: center; text-decoration: none; padding: 20px 24px; border-radius: 10px; border: none; cursor: pointer; letter-spacing: .5px; transition: background .2s,transform .1s; animation: pulse 2s infinite; }
+    /* ------------------------------------------
+       SECCIÓN 4 — GALERÍA DE PROYECTOS / LO QUE CREARÁS
+    ------------------------------------------ */
+    .gallery-section {
+      background: rgba(255, 238, 238, 1);
+      padding: 50px 16px;
+      text-align: center;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1020px;
+      margin: 0 auto;
+    }
+    @media (max-width: 850px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .gallery-grid { grid-template-columns: 1fr; } }
+
+    .gallery-item {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .gallery-item img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 12px;
+    }
+    .gallery-item h5 {
+      font-size: 15px;
+      font-weight: 700;
+      font-style: italic;
+      color: #000000;
+      line-height: 1.3;
+    }
+
+    /* ------------------------------------------
+       SECCIÓN 5 — MÁS TESTIMONIOS Y CERTIFICADO
+    ------------------------------------------ */
+    .testimonials-section {
+      background: #ffffff;
+      padding: 50px 16px;
+      text-align: center;
+    }
+    .testimonials-section h2 {
+      font-size: 24px;
+      font-weight: 900;
+      color: #8c0ff1;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+
+    .certificate-box {
+      max-width: 850px;
+      margin: 40px auto 0;
+      background: #fafafa;
+      border: 3px dashed #8c0ff1;
+      border-radius: 16px;
+      padding: 24px;
+    }
+    .certificate-box img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    /* ------------------------------------------
+       SECCIÓN 6 — OFERTA, BONOS Y CTA FINAL
+    ------------------------------------------ */
+    .offer-section {
+      background: linear-gradient(90deg, rgba(140, 15, 241, 1) 0%, rgba(140, 15, 241, 1) 100%);
+      padding: 50px 16px 70px;
+      text-align: center;
+      color: #ffffff;
+    }
+    .offer-section h2 {
+      font-size: 28px;
+      font-weight: 900;
+      color: #FDD539;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .offer-section h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    /* Cajas de Bonos */
+    .bonus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 880px;
+      margin: 0 auto 40px;
+      text-align: left;
+    }
+    @media (max-width: 700px) { .bonus-grid { grid-template-columns: 1fr; } }
+    .bonus-card {
+      background: rgba(255,255,255,0.12);
+      border: 2px solid #FDD539;
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .bonus-card h4 {
+      color: #FDD539;
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .bonus-card p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .price-box {
+      background: #ffffff;
+      color: #222;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+    .old-price {
+      font-size: 18px;
+      text-decoration: line-through;
+      color: #888;
+    }
+    .new-price {
+      font-size: 42px;
+      font-weight: 900;
+      color: #8c0ff1;
+      margin: 6px 0;
+    }
+
+    .payment-icons {
+      display: block;
+      max-width: 320px;
+      margin: 0 auto 24px;
+    }
+
+    @keyframes pulse {
+      0%   { box-shadow: 0 0 0 0 rgba(249,174,138,0.8); }
+      70%  { box-shadow: 0 0 0 18px rgba(249,174,138,0); }
+      100% { box-shadow: 0 0 0 0 rgba(249,174,138,0); }
+    }
+
+    .cta-btn {
+      display: inline-block;
+      width: 100%;
+      max-width: 880px;
+      background: #F9AE8A;
+      color: #ffffff;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 20px;
+      font-weight: 900;
+      text-align: center;
+      text-decoration: none;
+      padding: 22px 24px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      transition: background 0.2s, transform 0.1s;
+      animation: pulse 2s infinite;
+    }
     .cta-btn:hover { background: #EC9E79; transform: scale(1.01); }
-    .cta-btn:active { transform: scale(.99); }
+    .cta-btn:active { transform: scale(0.99); }
+    @media (max-width: 600px) { .cta-btn { font-size: 16px; padding: 18px; } }
 
     /* FOOTER */
-    footer { background: #1a1a1a; padding: 20px 16px; text-align: center; }
-    footer p { font-size: 12px; color: #888; }
-    footer a { color: #aaa; text-decoration: none; }
+    footer { background: #111111; padding: 24px 16px; text-align: center; }
+    footer p { font-size: 12px; color: #888888; }
+    footer a { color: #aaaaaa; text-decoration: none; }
     footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
 
-  <!-- HERO -->
+  <!-- ------------------------------------------
+       SECCIÓN 1 — HERO
+  ------------------------------------------ -->
   <section class="hero">
     <div class="container">
-      <h2>Descubre cómo muchas mujeres están elaborando accesorios con resina e iniciando su negocio desde casa en tan solo 20 días</h2>
+      <h2>DESCUBRE CÓMO MUCHAS MUJERES ESTÁN ELABORANDO ACCESORIOS CON RESINA E INICIANDO SU NEGOCIO DESDE CASA EN TAN SOLO 20 DÍAS</h2>
+
       <div class="video-box">
-        <p class="video-label"><strong>MIRA EL VIDEO ??</strong></p>
+        <p class="video-label">MIRA EL VIDEO ??</p>
         <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/PHZVzjyomOs?autoplay=1&mute=1&rel=0&modestbranding=1"
-                  title="Resina con Yuli" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe
+            src="https://www.youtube.com/embed/PHZVzjyomOs?autoplay=1&mute=1&rel=0&modestbranding=1"
+            title="Resina con Yuli - Presentación"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+          </iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SEPARATOR -->
+  <!-- SEPARADOR ONDULADO DE LA ORIGINAL -->
   <div class="separator-section" aria-hidden="true"></div>
 
-  <!-- BENEFITS -->
+  <!-- ------------------------------------------
+       SECCIÓN 2 — BENEFICIOS
+  ------------------------------------------ -->
   <section class="benefits">
     <div class="container">
       <h2>¡Imagínate poder aprender a elaborar todo tipo de accesorios con resina y generar un ingreso extra desde tu casa!</h2>
+
       <div class="benefits-box">
         <div class="benefits-grid">
+
           <div class="benefit-card">
-            <img src="https://storage.builderall.com//franquias/2/7357731/editor-html/12099664.jpg" alt="Alumna con resina">
-            <p><em>Generarás altos ingresos emprendiendo tu propio negocio desarrollando tu propia marca de accesorios con resina.</em></p>
+            <img src="https://storage.builderall.com//franquias/2/7357731/editor-html/12099664.jpg" alt="Marca de resina">
+            <p>Generarás altos ingresos emprendiendo tu propio negocio desarrollando tu propia marca de accesorios con resina.</p>
           </div>
+
           <div class="benefit-card">
-            <img src="https://storage.builderall.com//franquias/2/7357731/editor-html/12731692.png" alt="Accesorios de resina" style="border-radius:12px;height:80px;width:auto;object-fit:contain;">
-            <p><em>Crearás accesorios de resina de calidad que están en tendencia y que te permitirán destacarte.</em></p>
+            <img src="https://storage.builderall.com//franquias/2/7357731/editor-html/12731692.png" alt="Tendencia" style="border-radius:12px; height:90px; width:auto; object-fit:contain;">
+            <p>Crearás accesorios de resina de calidad que están en tendencia que te permitirán destacarte.</p>
           </div>
+
           <div class="benefit-card">
-            <img src="https://storage.builderall.com//franquias/2/7357731/editor-html/12118007.png" alt="Materiales para resina">
-            <p><em>Conocerás los materiales de calidad que están a tu alcance con bajo presupuesto.</em></p>
+            <img src="https://storage.builderall.com//franquias/2/7357731/editor-html/12118007.png" alt="Materiales a alcance">
+            <p>Conocerás los materiales de calidad y que estén a tu alcance con bajo presupuesto.</p>
           </div>
+
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CURRICULUM -->
+  <!-- ------------------------------------------
+       SECCIÓN 3 — TEMARIO EXHAUSTIVO COMPLETO
+  ------------------------------------------ -->
   <section class="curriculum">
     <div class="container">
       <h2>AQUÍ TE LO ENSEÑAMOS TODO</h2>
-      <h4>En más de 85 clases en video encontrarás...</h4>
+      <h4>En más de 60 clases en video encontrarás..</h4>
+
       <div class="accordion-wrapper">
 
+        <!-- Módulos exactos extraídos del código fuente original -->
         <div class="accordion-item">
           <button class="accordion-header" onclick="toggleAcc(this)" aria-expanded="false">
-            <span>INTRODUCCIÓN AL MUNDO DE LA RESINA</span><span class="acc-icon">+</span>
+            <span>Bienvenida</span>
+            <span class="acc-icon">+</span>
           </button>
           <div class="accordion-body">
-            <ul>
-              <li>Bienvenida al curso.</li>
-              <li>Lo que vas a aprender.</li>
-              <li>Comunidad privada en WhatsApp y Telegram.</li>
-            </ul>
+            <p>- Bienvenida al curso.<br>- Lo que vas a aprender.<br>- Comunidad privada en Telegram.</p>
           </div>
         </div>
 
         <div class="accordion-item">
           <button class="accordion-header" onclick="toggleAcc(this)" aria-expanded="false">
-            <span>TEORÍA</span><span class="acc-icon">+</span>
+            <span>Medidas, Herramientas y Materiales</span>
+            <span class="acc-icon">+</span>
           </button>
           <div class="accordion-body">
-            <ul>
-              <li>Introducción a la teoría de la resina</li>
-              <li>Tipos de resina: epoxi y UV</li>
-              <li>Diferencias entre resinas</li>
-              <li>Proporciones de mezcla correctas</li>
-              <li>Tiempo de curado de la resina</li>
-              <li>Temperatura y humedad en el trabajo con resina</li>
-              <li>Seguridad y ventilación al trabajar con resina</li>
-              <li>Cómo evitar burbujas en la resina</li>
-              <li>Tipos de acabados para tus piezas</li>
-              <li>Diferencias entre moldes de silicona y plástico</li>
-              <li>Almacenamiento y conservación de la resina</li>
-              <li>Tipos de accesorios que puedes crear</li>
-            </ul>
+            <p>- Medidas de Bioseguridad<br>- Herramientas<br>- Materiales</p>
           </div>
         </div>
 
         <div class="accordion-item">
           <button class="accordion-header" onclick="toggleAcc(this)" aria-expanded="false">
-            <span>MATERIALES Y HERRAMIENTAS</span><span class="acc-icon">+</span>
+            <span>Conociendo la Resina y los Pigmentos</span>
+            <span class="acc-icon">+</span>
           </button>
           <div class="accordion-body">
-            <ul>
-              <li>Herramientas y materiales básicos</li>
-              <li>Lista de proveedores recomendados</li>
-              <li>Elementos indispensables para trabajar con resina</li>
-              <li>Pigmentos, tintas y colorantes para resina</li>
-              <li>Colorantes en polvo y líquidos</li>
-              <li>Tipos de moldes de silicona para resina</li>
-              <li>Tips para desmoldar correctamente tus piezas</li>
-              <li>Aditivos: purpurina, flores secas y elementos decorativos</li>
-              <li>Insumos para el acabado y pulido de piezas</li>
-              <li>Equipos de protección personal</li>
-              <li>Cómo conservar y almacenar tus materiales</li>
-              <li>Presupuesto inicial sugerido</li>
-            </ul>
+            <p>- Qué tipo de resina usarás<br>- Cómo medir la resina epóxica<br>- Mezclado correcto de tu resina<br>- Tipos de pigmentos</p>
           </div>
         </div>
 
         <div class="accordion-item">
           <button class="accordion-header" onclick="toggleAcc(this)" aria-expanded="false">
-            <span>MÓDULO PRÁCTICO</span><span class="acc-icon">+</span>
+            <span>Lo que necesitas saber sobre los moldes</span>
+            <span class="acc-icon">+</span>
           </button>
           <div class="accordion-body">
-            <ul>
-              <li>Recomendaciones antes de elaborar tus piezas de resina</li>
-              <li>Mi primera pieza con resina epoxi</li>
-              <li>Llaveros con resina: paso a paso</li>
-              <li>Aretes y joyería con resina epoxi</li>
-              <li>Piezas decorativas para el hogar con resina</li>
-              <li>Uso de pigmentos y colorantes en resina</li>
-              <li>Técnica de flores y elementos encapsulados</li>
-              <li>Piezas con resina UV: acabado rápido</li>
-              <li>Uso de moldes de silicona avanzados</li>
-              <li>Resina con incrustaciones: fotos, flores secas, glitter</li>
-              <li>Pulseras y accesorios de moda con resina</li>
-              <li>Cuadros y arte en resina epoxi</li>
-              <li>Portafotos, portavasos y piezas para regalo</li>
-              <li>Acabado, pulido y presentación de tus piezas</li>
-              <li>Fotografía de producto para redes sociales</li>
-              <li>Cómo fijar precios y calcular costos</li>
-              <li>Dónde y cómo vender tus creaciones</li>
-              <li>Empaque y presentación de tus productos</li>
-            </ul>
+            <p>- Tipos de moldes<br>- Mantenimiento de tus moldes</p>
           </div>
         </div>
 
         <div class="accordion-item">
           <button class="accordion-header" onclick="toggleAcc(this)" aria-expanded="false">
-            <span>CREACIÓN DE TU PROPIO NEGOCIO DE ACCESORIOS CON RESINA</span><span class="acc-icon">+</span>
+            <span>Empezamos la práctica - Joyería en Resina</span>
+            <span class="acc-icon">+</span>
           </button>
           <div class="accordion-body">
-            <ul>
-              <li>Cómo crear tu marca personal de resina</li>
-              <li>Estrategias para vender en redes sociales</li>
-              <li>Cómo vender en ferias, mercados y bazares</li>
-              <li>Venta online: marketplaces y tiendas digitales</li>
-              <li>Cómo hacer catálogos atractivos de tus productos</li>
-              <li>Gestión de pedidos personalizados</li>
-              <li>Envíos y logística para tus ventas</li>
-              <li>Finanzas básicas para tu negocio artesanal</li>
-              <li>Cómo escalar tu negocio de resina</li>
-            </ul>
+            <p>- Aretes en moldes<br>- Pulseras y anillos en moldes<br>- Aretes y collares con biseles</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAcc(this)" aria-expanded="false">
+            <span>Llaveros en Resina</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <p>- Llaveros de Letras con encapsulado de flores<br>- Llavero con la técnica de las nubes<br>- Llaveros Shaker<br>- Llaveros en acrílicos<br>- Llaveros con molde en forma de virgen<br>- Llavero de letra con pintura acrílica y glitter</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAcc(this)" aria-expanded="false">
+            <span>Lapiceros, agenda y marcapáginas</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <p>- Lapicero #1<br>- Lapicero #2<br>- Agenda con resina<br>- Marcapáginas #1<br>- Marcapáginas #2</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAcc(this)" aria-expanded="false">
+            <span>Artículos Personales</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <p>- Peine en resina<br>- Gancho para el cabello en resina</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAcc(this)" aria-expanded="false">
+            <span>Accesorios para celular, placas para mascotas y porta vasos</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <p>- Funda para celular con resina<br>- Pop Socket para celular<br>- Placas para mascotas<br>- Porta Vasos en resina</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAcc(this)" aria-expanded="false">
+            <span>Cómo sacar los costos y empezar a crear tu marca</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <p>- Cómo sacar los costos y cuánto cobrar por tus accesorios<br>- Cómo crear tu marca para vender tus accesorios</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAcc(this)" aria-expanded="false">
+            <span>Personalización, Lista de proveedores y Despedida</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <p>- Cómo tener la tipografía para personalizar tus accesorios<br>- Lista de Proveedores para comprar la resina en tu país<br>- Despedida.</p>
           </div>
         </div>
 
       </div>
+
+      <!-- CAJA PROVEEDORES BANNER -->
+      <div class="suppliers-banner">
+        <h2>TE BRINDAMOS LA LISTA DE PROVEEDORES POR PAÍS PARA LA COMPRA DE TUS INSUMOS</h2>
+      </div>
+
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="testimonials">
+  <!-- ------------------------------------------
+       SECCIÓN 4 — LO QUE VAS A APRENDER A ELABORAR (TODAS LAS IMÁGENES ORIGINALES)
+  ------------------------------------------ -->
+  <section class="gallery-section">
     <div class="container">
-      <h2>Lo que dicen nuestras alumnas</h2>
-      <div class="testimonials-box">
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <img src="https://storage.builderall.com//franquias/2/7357731/editor-html/12099664.jpg" alt="Alumna 1">
-            <blockquote>"Nunca había trabajado con resina y en pocas semanas ya estoy vendiendo mis primeras piezas."</blockquote>
-            <cite>— María G.</cite>
-          </div>
-          <div class="testimonial-card">
-            <img src="https://storage.builderall.com//franquias/2/7357731/editor-html/12099665.jpg" alt="Alumna 2">
-            <blockquote>"El curso es muy completo, con Yuli aprendí desde los materiales hasta cómo vender. ¡100% recomendado!"</blockquote>
-            <cite>— Laura P.</cite>
-          </div>
-          <div class="testimonial-card">
-            <img src="https://storage.builderall.com//franquias/2/7357731/editor-html/12099666.jpg" alt="Alumna 3">
-            <blockquote>"Empecé sin saber nada y hoy tengo mi propio emprendimiento desde casa. ¡El mejor curso!"</blockquote>
-            <cite>— Daniela M.</cite>
-          </div>
+      <h2 style="font-size:24px; font-weight:900; color:#8c0ff1; margin-bottom:30px; text-transform:uppercase;">Tus Creaciones en Resina</h2>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://storage.builderall.com//franquias/2/7357731/editor-html/12099690.png" alt="Joyería en resina">
+          <h5>Joyería y Bisutería en Resina</h5>
+        </div>
+        <div class="gallery-item">
+          <img src="https://storage.builderall.com//franquias/2/7357731/editor-html/12099693.jpg" alt="Llaveros encapsulados">
+          <h5>Llaveros Personalizados</h5>
+        </div>
+        <div class="gallery-item">
+          <img src="https://storage.builderall.com//franquias/2/7357731/editor-html/12099694.jpg" alt="Artículos de Papelería">
+          <h5>Agendas y Marcapáginas</h5>
+        </div>
+        <div class="gallery-item">
+          <img src="https://storage.builderall.com//franquias/2/7357731/editor-html/12099700.jpg" alt="Accesorios Celular">
+          <h5>Fundas y Accesorios Celular</h5>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA FINAL -->
-  <section class="cta-section">
+  <!-- ------------------------------------------
+       SECCIÓN 5 — CERTIFICADO Y TESTIMONIOS
+  ------------------------------------------ -->
+  <section class="testimonials-section">
     <div class="container">
-      <img class="payment-icons"
-           src="https://storage.builderall.com//franquias/2/73748/editor-html/6068619.png"
-           alt="Métodos de pago">
+      <h2>Obtendrás un Certificado Internacional al Finalizar</h2>
+      
+      <div class="certificate-box">
+        <p style="font-size:16px; color:#555; font-weight:600;">Al terminar todas las lecciones del curso recibirás tu certificado de finalización avalado y descargable.</p>
+        <img src="https://storage.builderall.com//franquias/2/7357731/editor-html/12114834.png" alt="Certificado Resina con Yuli" style="max-width:480px; margin-top:20px;">
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------
+       SECCIÓN 6 — OFERTA, BONOS Y CTA FINAL
+  ------------------------------------------ -->
+  <section class="offer-section">
+    <div class="container">
+      <h2>¡OFERTA ESPECIAL POR TIEMPO LIMITADO!</h2>
+      <h3>Inscríbete hoy y recibe todos estos bonos exclusivos:</h3>
+
+      <div class="bonus-grid">
+        <div class="bonus-card">
+          <h4>?? BONO 1: Lista de Proveedores Internacionales</h4>
+          <p>Contactos directos en tu país para conseguir resina y moldes a precio mayorista.</p>
+        </div>
+        <div class="bonus-card">
+          <h4>?? BONO 2: Comunidad Privada de Apoyo</h4>
+          <p>Acceso a nuestro grupo VIP en Telegram para resolver dudas y compartir avances.</p>
+        </div>
+        <div class="bonus-card">
+          <h4>?? BONO 3: Plantillas de Costos y Precios</h4>
+          <p>Calculadora especial para definir el precio exacto de venta de cada pieza.</p>
+        </div>
+        <div class="bonus-card">
+          <h4>?? BONO 4: Guía de Tipografías para Personalizar</h4>
+          <p>Aprende a agregar nombres y letras perfectas a tus llaveros y accesorios.</p>
+        </div>
+      </div>
+
+      <div class="price-box">
+        <p class="old-price">Precio Regular: $100 USD</p>
+        <p class="new-price">OFERTA: $39.99 USD</p>
+        <p style="font-size:13px; color:#666;">(o el equivalente en tu moneda local)</p>
+      </div>
+
+      <img class="payment-icons" src="https://storage.builderall.com//franquias/2/73748/editor-html/6068619.png" alt="Métodos de Pago">
+
       <!--
-        Reemplaza TULINK_DE_AFILIADO con tu enlace real de Hotmart
-        Ejemplo: https://pay.hotmart.com/XXXXXXXX?ref=TU_REF
+        ================================================================
+        BOTÓN CTA — Reemplaza TULINK_DE_AFILIADO con tu link de Hotmart
+        ================================================================
       -->
       <a href="TULINK_DE_AFILIADO" class="cta-btn" target="_blank" rel="noopener noreferrer">
-        ¡SÍ, QUIERO APRENDER A CREAR CON RESINA! ?
+        ¡SÍ, QUIERO INSCTIBIRME AHORA CON DESCUENTO! ?
       </a>
+
     </div>
   </section>
 
