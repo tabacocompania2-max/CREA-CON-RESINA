@@ -1417,54 +1417,38 @@ document.addEventListener('DOMContentLoaded',function(){
   });
 });
 </script>
+<script src="https://cdn.embed.ly/player-0.1.0.min.js"></script>
 <script id="streamable-autopause">
 (function() {
-  var iframes = [];
+  function initStreamableAutoPause() {
+    var iframes = document.querySelectorAll('iframe[src*="streamable.com"]');
+    var players = [];
 
-  function updateIframes() {
-    iframes = Array.from(document.querySelectorAll('iframe[src*="streamable.com"]'));
-  }
-
-  function pauseAllExcept(targetIframe) {
-    iframes.forEach(function(frame) {
-      if (frame !== targetIframe && frame.contentWindow) {
+    iframes.forEach(function(iframe) {
+      if (typeof playerjs !== 'undefined') {
         try {
-          frame.contentWindow.postMessage('{"method":"pause"}', '*');
-          frame.contentWindow.postMessage('pause', '*');
+          var player = new playerjs.Player(iframe);
+          players.push(player);
+
+          player.on('play', function() {
+            players.forEach(function(p) {
+              if (p !== player) {
+                try { p.pause(); } catch(e) {}
+              }
+            });
+          });
         } catch(e) {}
       }
     });
   }
 
-  document.addEventListener('DOMContentLoaded', function() {
-    updateIframes();
-
-    // Listen to focus/click events on iframe wrappers
-    document.addEventListener('click', function(e) {
-      var iframe = e.target.closest('.t-wrap, div') ? e.target.closest('div').querySelector('iframe[src*="streamable.com"]') : null;
-      if (!iframe) {
-        var clicked = e.target;
-        if (clicked && clicked.tagName === 'IFRAME' && clicked.src.indexOf('streamable.com') !== -1) {
-          iframe = clicked;
-        }
-      }
-      if (iframe) {
-        updateIframes();
-        pauseAllExcept(iframe);
-      }
-    }, true);
-
-    // Also handle window blur when user interacts inside iframe
-    window.addEventListener('blur', function() {
-      setTimeout(function() {
-        var active = document.activeElement;
-        if (active && active.tagName === 'IFRAME' && active.src.indexOf('streamable.com') !== -1) {
-          updateIframes();
-          pauseAllExcept(active);
-        }
-      }, 100);
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimeout(initStreamableAutoPause, 500);
+  } else {
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(initStreamableAutoPause, 500);
     });
-  });
+  }
 })();
 </script>
 </body></html>
