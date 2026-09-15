@@ -1417,6 +1417,56 @@ document.addEventListener('DOMContentLoaded',function(){
   });
 });
 </script>
+<script id="streamable-autopause">
+(function() {
+  var iframes = [];
+
+  function updateIframes() {
+    iframes = Array.from(document.querySelectorAll('iframe[src*="streamable.com"]'));
+  }
+
+  function pauseAllExcept(targetIframe) {
+    iframes.forEach(function(frame) {
+      if (frame !== targetIframe && frame.contentWindow) {
+        try {
+          frame.contentWindow.postMessage('{"method":"pause"}', '*');
+          frame.contentWindow.postMessage('pause', '*');
+        } catch(e) {}
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    updateIframes();
+
+    // Listen to focus/click events on iframe wrappers
+    document.addEventListener('click', function(e) {
+      var iframe = e.target.closest('.t-wrap, div') ? e.target.closest('div').querySelector('iframe[src*="streamable.com"]') : null;
+      if (!iframe) {
+        var clicked = e.target;
+        if (clicked && clicked.tagName === 'IFRAME' && clicked.src.indexOf('streamable.com') !== -1) {
+          iframe = clicked;
+        }
+      }
+      if (iframe) {
+        updateIframes();
+        pauseAllExcept(iframe);
+      }
+    }, true);
+
+    // Also handle window blur when user interacts inside iframe
+    window.addEventListener('blur', function() {
+      setTimeout(function() {
+        var active = document.activeElement;
+        if (active && active.tagName === 'IFRAME' && active.src.indexOf('streamable.com') !== -1) {
+          updateIframes();
+          pauseAllExcept(active);
+        }
+      }, 100);
+    });
+  });
+})();
+</script>
 </body></html>
 
 
